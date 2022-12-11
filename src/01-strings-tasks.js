@@ -201,14 +201,13 @@ function extractEmails(str) {
  *             '└──────────┘\n'
  *
  */
-function getRectangleString(width, height) {
+function getRectangleString(/* width, height */) {
   throw new Error('Решу сложные задачи позже');
   // const topLeftBorder = '┌';
   // const topRightBorder = '┐';
   // const bottomLeftBorder = '└';
   // const bottomRightBorder = '┘';
   // const border = '─';
-
 }
 
 
