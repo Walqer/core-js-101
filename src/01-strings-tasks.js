@@ -202,7 +202,7 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(/* width, height */) {
-  throw new Error('Решу сложные задачи позже');
+  throw new Error('Not implemented');
   // const topLeftBorder = '┌';
   // const topRightBorder = '┐';
   // const bottomLeftBorder = '└';
