@@ -71,6 +71,7 @@ function getFactorial(/* n */) {
  */
 function getSumBetweenNumbers(n1, n2) {
   let sum = 0;
+  // eslint-disable-next-line no-plusplus
   for (let i = n1; i <= n2; i++) {
     sum += i;
   }
