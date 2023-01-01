@@ -7,7 +7,6 @@
  *                                                                                           *
  ******************************************************************************************* */
 
-
 /**
  * Returns an area of a rectangle given by width and height.
  *
@@ -22,7 +21,6 @@
 function getRectangleArea(width, height) {
   return width * height;
 }
-
 
 /**
  * Returns a circumference of circle given by radius.
@@ -52,7 +50,7 @@ function getCircleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  return (value1 / 2 + value2 / 2);
+  return value1 / 2 + value2 / 2;
 }
 
 /**
@@ -86,9 +84,8 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot(a, b) {
-  return (-b / a);
+  return -b / a;
 }
-
 
 /**
  * Returns an angle (in radians) between two vectors given by xi and yi,
@@ -129,7 +126,6 @@ function getLastDigit(value) {
   return str[str.length - 1];
 }
 
-
 /**
  * Returns a number by given string representation.
  *
@@ -162,7 +158,6 @@ function getParallelepipedDiagonal(a, b, c) {
   return Math.sqrt(a ** 2 + b ** 2 + c ** 2);
 }
 
-
 /**
  * Returns the number rounded to specified power of 10.
  *
@@ -180,8 +175,8 @@ function getParallelepipedDiagonal(a, b, c) {
  *   1678, 2  => 1700
  *   1678, 3  => 2000
  */
-function roundToPowerOfTen(/* num, pow */) {
-  throw new Error('Not implemented');
+function roundToPowerOfTen(num, pow) {
+  return Math.round(num / 10 ** pow) * 10 ** pow;
 }
 
 /**
@@ -201,10 +196,15 @@ function roundToPowerOfTen(/* num, pow */) {
  *   16 => false
  *   17 => true
  */
-function isPrime(/* n */) {
-  throw new Error('Not implemented');
+function isPrime(n) {
+  // eslint-disable-next-line no-plusplus
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return true;
 }
-
 /**
  * Tries to convert value to number and returns it if conversion was successful;
  * otherwise returns default value passed as a second argument.
@@ -220,8 +220,12 @@ function isPrime(/* n */) {
  *   toNumber(42, 0) => 42
  *   toNumber(new Number(42), 0) => 42
  */
-function toNumber(/* value, def */) {
-  throw new Error('Not implemented');
+function toNumber(value, def) {
+  // eslint-disable-next-line no-restricted-globals
+  if (typeof +value === 'number' && !isNaN(+value)) {
+    return Number(value);
+  }
+  return def;
 }
 
 module.exports = {
